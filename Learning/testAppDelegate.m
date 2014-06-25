@@ -7,14 +7,18 @@
 //
 
 #import "testAppDelegate.h"
-
+#import "Exercise1ViewController.h"
 @implementation testAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    Exercise1ViewController *viewController = [[Exercise1ViewController alloc] initWithNibName:@"Exercise1ViewController" bundle:nil];
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
